@@ -1,0 +1,27 @@
+<%- include ('partials/header'); -%>
+
+<form action="/game/edit/<%= id %> " method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="title" value="<%= title %> ">
+    </div>
+
+    <div class="form-group">
+        <label>Creator</label>
+        <input type="text" class="form-control" name="creator" value="<%= creator %>">
+    </div>
+
+    <div class=" form-group">
+        <label>Width</label>
+        <input type="text" class="form-control" name="width" value="<%= width %>">
+    </div>
+
+    <div class=" form-group">
+        <label>Height</label>
+        <input type="text" class="form-control" name="height" value="<%= height %>">
+    </div>
+
+    <button type=" submit" class="btn btn-primary">Add</button>
+</form>
+
+<% - include('partials/footer'); -%>

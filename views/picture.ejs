@@ -1,0 +1,15 @@
+<%- include ('partials/header'); -%>
+<h1>These are all of the pictures from page <%= pageNumber %> </h1>
+
+<div class="row">
+    <% for(var i = 0; i<picData.results.length; i++) { %>
+    <div style="border: 2px solid red; width: 290px; background-color: <%= picData.results[i].color %>;">
+        <img src="<%= picData.results[i].urls.small %>" style="width: 286px; height: 180px;" alt="">
+        <p>By: <%= picData.results[i].user.name %> on <%= picData.results[1].created_at %> </p>
+        <p>Dimension : <%= picData.results[i].width %> X <%= picData.results[1].height %> </p>
+        <p>Likes: <%= picData.results[i].likes %> </p>
+    </div>
+    <% } %>
+</div>
+
+<%- include ('partials/footer'); -%>
